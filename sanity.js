@@ -1,4 +1,4 @@
-import { createClient } from "next-sanity";
+import { createClient, createCurrentUserHook } from "next-sanity";
 // lib/config.js
 export const config = {
   /**
