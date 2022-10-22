@@ -1,4 +1,5 @@
 import { createClient, createCurrentUserHook } from "next-sanity";
+import createImageUrlBuilder from "@sanity/image-url";
 // lib/config.js
 export const config = {
   /**
