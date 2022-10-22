@@ -44,7 +44,7 @@ export default function Home({ posts }: Props) {
       {/* Posts */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-4">
         {posts.map((post) => (
-          <Link href={`/post/${post.slug.current}`}>
+          <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className="group cursor-pointer border rounded-lg overflow-hidden">
               <img
                 className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
