@@ -1,8 +1,6 @@
 import Link from "next/link"
 
 
-
-
 function Header() {
   return (
     <header className="flex justify-between p-5 max-w-6xl mx-auto">
