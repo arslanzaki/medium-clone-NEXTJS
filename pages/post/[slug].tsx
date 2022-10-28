@@ -17,7 +17,7 @@ interface IFormInput {
 }
 
 function Post({ post }: Props) {
- // console.log(post);
+  // console.log(post);
   const {
     register,
     handleSubmit,
@@ -25,7 +25,13 @@ function Post({ post }: Props) {
   } = useForm<IFormInput>();
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log(data);
+    //console.log(data);
+    fetch("/api/createComment", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then(() => console.log(data))
+      .catch((error) => console.log(error));
   };
 
   return (
