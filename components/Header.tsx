@@ -16,8 +16,8 @@ function Header() {
             </div>
         </div>
 
-        <div className="flex items-center space-x-5 text-green-600">
-            <h3>Sign In</h3>
+        <div className="flex items-center md:space-x-5 text-green-600">
+            <h3 className="hidden md:inline-block">Sign In</h3>
             <h3 className="border border-green-600 px-4 py-1 rounded-full">Get Started</h3>
         </div>
     </header>
