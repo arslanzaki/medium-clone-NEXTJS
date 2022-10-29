@@ -16,7 +16,7 @@ export default async function createComment(
   res: NextApiResponse
 ) {
   const { _id, name, email, comment } = JSON.parse(req.body);
-
+  // console.log(req);
   try {
     await client.create({
       _type: "comment",
@@ -29,9 +29,9 @@ export default async function createComment(
       comment,
     });
   } catch (err) {
-    return res.status(500).json({message: `Could'nt submit comment!`, err})
+    return res.status(500).json({ message: `Couldn't submit comment!`, err });
   }
 
-  console.log("SUBMITTED")
+  console.log("SUBMITTED");
   return res.status(200).json({ message: "Comment Submitted!" });
 }
